@@ -1,0 +1,66 @@
+<app-header></app-header>
+<div class="card">
+    <h2>Create Loan</h2>
+    <form #f="ngForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="details" >
+            <div class="form-group">
+                <label for="loaID">Loan Id:</label>
+                <input type="text" ngModel id="loanID" #loanId="ngModel" placeholder="enter loan id"
+                [class.is.invalid]="loanId.invalid && loanId.touched" class="form-control"
+                name="loanID" [(ngModel)]="load.loanID" required><br><br>
+            </div>
+
+
+            <div class="form-group">
+                
+                 <div class="radio-set">
+                    <label >Payment Term:</label><br>
+                <input type="radio" id="INTRESTONLY" name="INTRESTONLY" value="INTRESTONLY"
+                name="payment_term" [(ngModel)]="load.payment_term" required>
+                <label >Intrest Only.</label><br>
+                <input type="radio" id="evenPrinciple" name="evenPrinciple" value="evenPrinciple"
+                name="payment_term" [(ngModel)]="load.payment_term" >
+                <label >Even Principle.</label><br>
+                </div><br>
+            </div>
+            <div class="form-group">
+                <label for="lamount">Loan Amount:</label>
+                <input type="text" id="lamount" name="lamount" placeholder="enter loan amount"
+                name="loanamount" [(ngModel)]="load.loanamount" required><br><br>
+            </div>    '
+            
+            <div class="form-module">
+                <label for="dates">Date:</label>
+                <input type="date"
+                name="loanstartdate" [(ngModel)]="load.loanstartdate" required><br><br>          
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-3">
+                    <label for="validationDefault04" class="form-label">Payment Frequency:</label>
+                    <select class="form-select"   name="type" [(ngModel)]="load.payment_frquency" id="validationDefault04"  required> 
+                   <option  value="1" selected>Monthly</option>
+                    <option value="4" >Quaterly</option>
+                    <option value="6" >Half Year</option>
+                    <option value="12">Yearly </option>
+                    </select>
+                    </div><br><br > 
+            </div>
+            
+            <div class="form-group">
+                <div class="col-md-3">
+                    <label for="validationDefault04" class="form-label">tenure:</label>
+                    <select class="form-select" name="type" [(ngModel)]="load.tenure" id="validationDefault04"  required> 
+                   <option  value="6" selected>six month</option>
+                    <option value="12">one year</option>
+                    <option value="18">one and half year</option>
+                    <option value="24">two year </option>
+                    </select>
+                    </div><br><br > 
+            </div>
+             <div class="button-div">
+                <input id="submit_btn1" type="submit" value="Submit">
+            </div>
+        </div>
+    </form>
+</div>

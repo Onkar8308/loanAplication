@@ -1,0 +1,23 @@
+<div class="card">
+  <app-header></app-header>
+   <table class="table-class" style="background-color:#fff;" >
+    <thead>
+      <th>paymentsheduleid</th>
+      <th>paymentdate</th>
+      <th>principle</th>
+      <th>projectedintrest</th>
+      <th>paymentstatus</th>
+        <th>paymentamount</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of paymentshedule">
+        <td> {{item.paymentsheduleid}} </td>
+        <td> {{item.paymentdate}} </td>
+        <td>{{item.principle}} </td>
+        <td> {{item.projectedintrest}} </td>
+        <td> {{item.paymentstatus}} </td>
+        <td> {{item.paymentamount}} </td>
+      </tr> 
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,34 @@
+<app-header></app-header>
+<div class="card">
+    <h2>Customers Loans</h2>
+    <h2> <a href="">Home </a>
+   </h2>
+    <table class="table-class" >
+        <thead>
+          <th>customerID</th>
+          <th>loanID</th>
+          <th>paymentfrquency</th>
+          <th>interest_rate</th>
+          <th>paymentterm</th>
+            <th>loanamount</th>
+          <th>tradedate</th>
+          <th>loanStartDate</th>
+          <th>maturitydate</th>
+          <th>tenure</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of data ;index as i">
+            <td> {{item.customerID}} </td>
+            <td>{{item.loanID}}</td>
+            <td> {{item.payment_frquency}} </td>
+            <td>{{item.interest_rate}} % </td>
+            <td> {{item.payment_term}} </td>
+            <td> {{item.loanamount}} </td>
+            <td> {{item.tradedate}} </td>
+            <td>{{item.loanstartdate}} </td>
+            <td> {{item.maturitydate}} </td>
+            <td> {{item.tenure}} (in month)</td>
+           </tr> 
+        </tbody>
+      </table>
+</div>
